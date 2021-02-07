@@ -1,0 +1,87 @@
+{% load static %}
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h2>Products</h2>
+        </div>
+{#        {% for pt in product_types %}#}
+{#            <div style="min-height: 80%;margin-top: 30px" class="row no-gutters">#}
+{#                <div class="col-xl-6 aos-init" style="margin: auto">#}
+{#                    <img style="border-radius: 5%" src="/media/{{ pt.image }}" width="80%" height="80%" id="product_image{{ pt.id }}" class="product_image_class">#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
+        <ul class="nav nav-pills" style="background: transparent">
+            {% for product in products %}
+            <li {% for k ,i in product_ids.items %}{% if product.id == k %} id={{ i.id }} {% endif %}{% endfor %}class="product_main_header"><a {% for k ,i in product_ids.items %}{% if product.id == k %} id="{{ i.id }}" {% endif %}{% endfor %} data-toggle="pill" href="#menu{{ product.id }}" {% if forloop.counter == 1 %} class="active" {% endif %} >{{ product|capfirst }}</a> </li>
+            {% endfor %}
+        </ul>
+    <div style="border: #4e555b solid 1px;margin-left: 20px"></div>
+
+        <div class="tab-content" id="tab_product_content" >
+            {% for product in products %}
+                <div id="menu{{product.id}}" class="tab-pane fade{% if forloop.counter == 1 %} active show{% endif %}">
+                    <ul class="nav nav-pills">
+                {% for pt in product_types %}
+                    {% if product.id == pt.product.id %}
+                            <li  id="{{ pt.id }}" style="margin-left: 20px;"  ><a id="{{ pt.id }}" data-toggle="pill" href="#menu1{{ pt.id }}" {% if forloop.counter == 1 %}class="active"{% endif %}>{{ pt.product_type|capfirst }}</a></li>
+
+                    {% endif %}
+                {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+
+        </div>
+        <p class="two" style="border-bottom: solid 0px #717171;"></p>
+
+            <div class="tab-content">
+                <div class="submenu">
+                {% for product in products %}
+
+                    {% for pt in product_types %}
+                        {% if  pt.product == product %}
+                    <div  {% if forloop.counter == 1  %}class="tabe-pane fade active show"{% else %}class="tabe-pane fade" style="display: none !important;" {% endif %} id="menu1{{ pt.id }}">
+                        <div  class="row no-gutters">
+                            <div class="col-xl-6 aos-init row_no_gutters"  align="center">
+                                <img  style="border-radius: 5%" src="/media/{{ pt.image }}" width="80%" height="80%" id="product_image{{ pt.id }}" class="product_image_class">
+                                {% for img in packages %}
+                                    {% if img.product_package.id == pt.id %}
+                                        <img class="package_image" id="img{{ img.id }}" src="/media/{{ img.package_image }}" width="80%" height="80%"  style="display: none">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="col-xl-6 aos-init">
+                                <div class="col-xl-12 content aos-init aos-animate"><div class="product_type_name">{{ pt.product_type|capfirst }}</div></div>
+                                    <div class="row row_icon_image">
+                                    {% for img in packages %}
+                                        {% if img.product_package.id == pt.id %}
+                                            <div id="package_img" class="col-md-3 col-lg-3 d-flex align-items-stretch mb-3 mb-lg-0" style="margin: 10px;width: unset">
+                                                <div class="icon-box aos-init icon_box_aos_init" data-aos="fade-up" data-aos-delay="200">
+                                                    {% if  img.package_image != '' and img.package_image != none %}
+                                                        <div class="icon_size_package_images"><img style="height: 100%;width: 100%" src="/media/{{ img.package_image }}"   class="{{ img.id }}"  /></div>
+                                                    {% endif %}
+                                                {{ img.quantity }} {{ img.unit|capfirst }}</div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                <div class="col-xl-12 content aos-init aos-animate" id="enquiry_more_btn">
+                                    <a class="btn btn-primary" href="#contact" id="{{ pt.id }}" ><label id="{{ pt.id }}" style="margin-bottom: unset !important;">Enquiry Now</label></a>
+                                </div>
+{#                                <div class="col-xl-12 content aos-init aos-animate">#}
+                                <div class="product_description">
+                                    {{ pt.description }}
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            </div>
+
+    </div>
+</section>

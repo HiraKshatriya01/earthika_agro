@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Earthika Agro</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/earthika_logo4.jpeg' %}"/>
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{%  static 'assets/css/product_gallery_ginger.css' %}" rel="stylesheet">
+
+    {#vegas#}
+    <link rel="stylesheet" href="{% static 'vegas/vegas.min.css' %}">
+    <script src="{% static 'vegas/vegas.min.js' %}"></script>
+    {#    end-vegas#}
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="/"><span>Earthika Agro</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li ><a href="/" class="back_to_home_top">Home</a></li>
+                <li><a href="#services">Technology</a></li>
+
+                {#          <li><a href="#team">Services</a></li>#}
+                <li class="drop-down"><a href="">Products</a>
+                    <ul>
+                        {#              <li class="drop_down_li"><a href="#"></a>Turmeric</li>#}
+                        <li class="drop_down_li"><a href="#about">Turmeric</a></li>
+                        <li class="drop_down_li"><a href="#counts">Ginger</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cta">FAQ</a></li>
+                <li><a href="#portfolio">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" >
+    <div class="hero-container" data-aos="fade-up">
+        <h1>Earthika Agro</h1>
+        <h6>Turmeric and especially its most active compound curcumin have many scientifically-proven health benefits, such as the potential to prevent heart disease, Alzheimer's and cancer. It's a potent anti-inflammatory and antioxidant and may also help improve symptoms of depression and arthritis.</h6>
+        <a href="#services" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+</section><!-- End Hero -->
+<main id="main">
+    {% include 'sections/technology.html' %}
+    {#{% include 'sections/product.html' %}#}
+    {#{% include 'sections/ginger.html' %}#}
+    {% include 'sections/faq.html' %}
+    {% include 'sections/gallery.html' %}
+    {% include 'sections/contact.html' %}
+
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script>
+        function mySubmitFunction(event)
+        {
+            $("#enquiry_form").submit(function (event) {
+
+                /* stop form from submitting normally */
+                event.preventDefault();
+                $(".loading").css('display','block')
+                csrftoken = "{{ csrf_token }}"
+
+                /* get the action attribute from the <form action=""> element */
+                var $form = $(this);
+                url = '/enquiry_msg/';
+
+                /* Send the data using post with element id name and name2*/
+                var posting = $.post(url, {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    mobile: $('#mobile').val(),
+                    message: $('#message').val(),
+                    csrfmiddlewaretoken: csrftoken
+                });
+
+                /* Alerts the results */
+                posting.done(function (data) {
+                    $(".loading").css('display','none')
+                    $(".sent-message").css('display', 'block');
+                });
+                posting.fail(function () {
+                    $(".loading").css('display', 'none !important');
+                    $(".sent-message").html("Your message not sent! please check network or try after sometimes").css({
+                        'display': 'block',
+                        'background': 'red'
+                    });
+
+                });
+            });
+        }
+    </script>
+</main>
+</body>
+
+</html>
