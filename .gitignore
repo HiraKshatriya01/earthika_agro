@@ -11,6 +11,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.earthika_venv
+#.earthika_venv
 
-earthika_venv/
+#earthika_venv/
