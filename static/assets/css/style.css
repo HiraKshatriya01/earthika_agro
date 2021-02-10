@@ -1552,7 +1552,7 @@ section {
     margin-top: 32px;
   }
   .faq_question p {
-    margin: 0 0 20px 20px;
+    /*margin: 0 0 20px 20px;*/
     background: #1c7430;
     border-radius: 25px;
   }
@@ -1653,6 +1653,9 @@ section {
   #desktop_div{
     display: none;
   }
+  /*.desktop_div{*/
+  /*  display: none;*/
+  /*}*/
   #mobile_div{
     display: block;
   }

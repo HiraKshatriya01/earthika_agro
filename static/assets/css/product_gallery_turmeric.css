@@ -1668,7 +1668,7 @@ img {vertical-align: middle;}
     margin-top: 32px;
   }
   .faq_question p {
-     margin: 0 0 20px 20px;
+     /*margin: 0 0 20px 20px;*/
     background: #1c7430;
     border-radius: 25px;
   }
