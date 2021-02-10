@@ -1,0 +1,81 @@
+{% load static %}
+<section id="contact" class="contact section-bg">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h2>Contact Us</h2>
+            {#          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>#}
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="200" >
+
+
+            <div class="col-lg-6">
+                <form  role="form" class="php-email-form" id="enquiry_form" onsubmit="return mySubmitFunction(event)">
+                    {% csrf_token %}
+                    <div class="form-row" id="">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" value="" placeholder="Your Name" data-rule="minlen:1" data-msg="Please enter at least 4 chars" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="email" class="form-control" name="email" id="email" value="" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validate"></div>
+                        </div>
+                        <input type="hidden" class="enquiry_product_id" id="" value="" hidden>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" min="0"  minlength="10" maxlength="12" class="form-control" name="mobile" id="mobile" value="" placeholder="Mobile" data-rule="minlen:10, maxlen:12" data-msg="Please enter correct mobile number" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" id="message" data-rule="required" data-msg="Please write something for us" value="" placeholder="Message"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit" id="submit_enquiry">Send Message</button></div>
+                </form>
+            </div>
+
+            <div class="col-lg-6 ">
+                {#            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>#}
+                <iframe src="https://maps.google.com/maps?q=Opposite%20Padmavati%20School,%20Raipur,%20Ganj,%20Raipur%20(Chhattisgarh)&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            </div>
+
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6">
+                <div class="info-box mb-4">
+{#                    <i class="bx bx-current-location"></i>#}
+{#                    <h3>Registered Address:</h3>#}
+{#                    <p>Mavini Sadan, Lane No – 04, Ward No – 23, Opposite Padmavati School, Raipur, Ganj, Raipur (Chhattisgarh) Pin Code : 4920019</p>#}
+                    <h3>Work Address</h3>
+                    <p>Village Mongra, Plot No. 629/2, 629/3, Rajim Road, Behind Warehouse, <br>
+                        Tehsil – Mahasamund (Chhattisgarh)<br>
+                        Pin Code : 493445</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>ravi@binomialsolutions.com</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Us</h3>
+                    <p>+919752042942</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>

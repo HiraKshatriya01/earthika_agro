@@ -1,1 +1,0 @@
-# earthika_agro
