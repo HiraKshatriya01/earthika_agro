@@ -3,6 +3,7 @@ from choices import *
 
 class Product(models.Model):
     name = models.CharField(max_length=100, null=True,blank=True,default='')
+    image = models.ImageField(default='', upload_to='media/product', blank=True)
     active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     modified = models.DateTimeField(auto_now=True, null=True, blank=True)

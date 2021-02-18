@@ -745,9 +745,10 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(231, 247, 255, 0.8), rgba(215, 229, 236, 0.8)), url("../img/vertical_farming.jpg") fixed center center;
+  background: linear-gradient(rgba(231, 247, 255, 0.8), rgba(215, 229, 236, 0.8));
+  /*background: linear-gradient(rgba(231, 247, 255, 0.8), rgba(215, 229, 236, 0.8)), url("../img/vertical_farming.jpg") fixed center center;*/
   background-size: cover;
-  padding: 60px 0;
+  padding-bottom: 60px !important;
 }
 
 .cta h3 {
@@ -1413,7 +1414,7 @@ section {
   background: #3e6171;
   color: #fff;
   transition: 0.3s;
-  border-radius: 4;
+  border-radius: 4px;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
@@ -1478,53 +1479,6 @@ section {
 }
 
 
-#earthika_agro_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/earthika_home_page2.jpeg") top center;
-  background-size: cover;
-  position: relative;
-}
-
-
-#turmeric_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/turmeric-powder2.jpg") center;
-  background-size: cover;
-  position: relative;
-}
-
-#tomato_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/tomato.jpg") center;
-  background-size: cover;
-  position: relative;
-}
-
-#ginger_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/ginger.jpg")  center;
-  background-size: cover;
-  position: relative;
-}
-#green_chilli_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/chilli.jpg") center;
-  background-size: cover;
-  position: relative;
-}
-
-#compost_top{
-  width: 100%;
-  height: 100vh;
-  background: url("../img/compost.jpg") center;
-  background-size: cover;
-  position: relative;
-}
 .carousel-inner{
   height: 100vh !important;
 }

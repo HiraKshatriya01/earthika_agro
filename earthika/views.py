@@ -14,17 +14,19 @@ def All_Product(request):
     context = {}
     product_ids = {}
     template = loader.get_template('product.html')
-    context['products'] = Product.objects.all()
+    try:
+        context['products'] = Product.objects.filter(active=True)
 
-    for a in context['products']:
-        product_ids[a.id] = Product_Type.objects.values('id').filter(product = a).first()
-    print('pro_ids:',product_ids)
-    context['product_ids'] = product_ids
-    context['product_types'] = Product_Type.objects.all()
-    context['pt_len'] = len(context['product_types'])
-    context['packages'] = Product_Type_Package.objects.all()
+        for a in context['products']:
+            product_ids[a.id] = Product_Type.objects.values('id').filter(product = a,active=True).first()
+        print('pro_ids:',product_ids)
+        context['product_ids'] = product_ids
+        context['product_types'] = Product_Type.objects.all()
+        context['pt_len'] = len(context['product_types'])
+        context['packages'] = Product_Type_Package.objects.all()
 
-    print('product:------',vars(context['product_types'][0]))
+        print('product:------',vars(context['product_types'][0]))
+    except:pass
 
 
 

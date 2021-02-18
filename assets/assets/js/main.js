@@ -12,7 +12,7 @@
   if (window.matchMedia("(max-width: 991px)").matches) {
     scrolltoOffset += 30;
   }
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+  $(document).on('click', '.nav-menu a, .mobile_footer_header_links a,#enquiry_more_btn a,  .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       e.preventDefault();
@@ -140,6 +140,7 @@
     return false;
   });
 
+
   // jQuery counterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
@@ -196,7 +197,7 @@
   // Init AOS
   function aos_init() {
     AOS.init({
-      duration: 800,
+      duration: 1,
       easing: "ease-in-out",
       once: true
     });
@@ -204,5 +205,70 @@
   $(window).on('load', function() {
     aos_init();
   });
+  $('.faq_question_div').click(function() {
+
+      $(".faq_question_div").find('icon').removeClass('bx-caret-up');
+      $(".faq_question_div").find('icon').addClass('bx-caret-down');
+
+    if ( $(this).find('.faq_answer').css('display') === 'block' ){
+      $(".faq_question_div").find('icon').removeClass('bx-caret-up');
+      $(".faq_question_div").find('icon').addClass('bx-caret-down');
+      $('.faq_answer').css('display', 'none');
+
+    }
+    else {
+      $(this).find('icon').removeClass('bx-caret-down');
+      $(this).find('icon').addClass('bx-caret-up');
+
+      $('.faq_answer').css('display', 'none');
+      $(this).find('.faq_answer').css('display', 'block');
+    }
+
+  });
+var i=0;
+  $(".about .nav-pills a").click(function() {
+
+    var id = $(this).attr('id');
+    $(".package_image").css('display','none');
+    $(".product_image_class").css('display','block');
+    $(".tab-content .nav-pills a").removeClass('active');
+    $("#tab_product_content #"+id).find('a').addClass('active');
+
+    $(".submenu").find('.fade').css('display','none');
+    $("#menu1"+id).css('display','block');
+    $("#menu1"+id).addClass('active show');
+    console.log(i++);
+  });
+  $(".about .tab-content a").click(function() {
+    var id = $(this).attr('id');
+    $(".package_image").css('display','none');
+    $(".product_image_class").css('display','block');
+
+    $(".submenu").find('.fade').css('display','none');
+    $("#menu1"+id).css('display','block');
+    $("#menu1"+id).addClass('active show');
+  });
+
+  $(".submenu .mb-lg-0").click(function() {
+console.log('set_src');
+
+    var img_id = $(this).find('img').attr('class');
+    $(".product_image_class").css('display','none');
+    $(".package_image").css('display','none');
+    setTimeout(function(){$("#img"+img_id).css('display','block');}, 100);
+
+
+  });
+  $(".btn-primary").click(function() {
+    var product_id = $(this).find('label').attr('id');
+    $(".enquiry_product_id").attr('value',product_id);
+  });
+
+  $('.carousel').carousel({
+  interval: 2000
+});
+
+
+
 
 })(jQuery);

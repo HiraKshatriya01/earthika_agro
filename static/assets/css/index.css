@@ -1,0 +1,61 @@
+.mobile_div{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop_div{
+        display: none;
+    }
+    .mobile_div{
+        display: block;
+    }
+}
+
+
+#earthika_agro_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/earthika_home_page2.jpeg") top center;
+  background-size: cover;
+  position: relative;
+}
+
+
+#turmeric_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/shutter_stock/image_slide/turmeric.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#tomato_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/shutter_stock/image_slide/tomato.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#ginger_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/shutter_stock/image_slide/ginger.jpg")  center;
+  background-size: cover;
+  position: relative;
+}
+#green_chilli_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/shutter_stock/image_slide/green_chilli.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#compost_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/shutter_stock/image_slide/compost.jpg") center;
+  background-size: cover;
+  position: relative;
+}

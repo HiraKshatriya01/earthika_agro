@@ -352,19 +352,21 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/turmeric3.jpg") top center;
+  /*background: url("../img/earthika_home_page2.jpeg") top center;*/
   background-size: cover;
   position: relative;
-  margin-bottom: -90px;
+  /*margin-bottom: -90px;*/
 
 }
+
 .hero-container h6{
   color: #FFFFFF;
   width: 50%;
   padding-top: 15px;
 }
-.d-lg-block a{
+header .d-lg-block a{
   color: #FFFFFF !important;
+  font-weight: bold;
 }
 #hero .hero-container {
   position: absolute;
@@ -383,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
   font-size: 100px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 80px;
   text-transform: uppercase;
   color: #fff;
   text-shadow: -1px 0 2px #2f4d5a;
@@ -433,13 +435,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
-}
 
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  /*padding: 60px 0;*/
 }
 
 .section-bg {
@@ -620,6 +622,9 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services{
+  padding-bottom: 60px !important;
+}
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -740,9 +745,10 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(54, 86, 103, 0.8), rgba(54, 86, 103, 0.8)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(231, 247, 255, 0.8), rgba(215, 229, 236, 0.8));
+  /*background: linear-gradient(rgba(231, 247, 255, 0.8), rgba(215, 229, 236, 0.8)), url("../img/vertical_farming.jpg") fixed center center;*/
   background-size: cover;
-  padding: 60px 0;
+  padding-bottom: 60px !important;
 }
 
 .cta h3 {
@@ -1139,7 +1145,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  padding-bottom: 80px;
+  padding-bottom: 250px;
 }
 
 .contact .info-box {
@@ -1151,7 +1157,7 @@ section {
 }
 
 .contact .info-box i {
-  font-size: 32px;
+  font-size: 27px;
   color: #3e6171;
   border-radius: 50%;
   padding: 8px;
@@ -1174,7 +1180,7 @@ section {
 
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 30px;
+  padding: 44px;
   background: #fff;
 }
 
@@ -1408,7 +1414,7 @@ section {
   background: #3e6171;
   color: #fff;
   transition: 0.3s;
-  border-radius: 4;
+  border-radius: 4px;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
@@ -1431,5 +1437,234 @@ section {
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
+  }
+}
+.faq_answer{
+  display: none;
+  /*background: #2f4d5a;*/
+  color: #1b1e21 !important;
+}
+
+.faq_question{
+  /*font-weight: bold;*/
+  /*background: #1c7430;*/
+  color: #FFFFFF !important;
+
+  /*margin-right: 20px !important;*/
+  margin-top: 32px;
+  font-size: 17px;
+  /*margin: 20px;*/
+  /*height: 30px;*/
+}
+.faq_question p{
+  margin: 0  20px 20px 20px;
+  background: #1c7430;
+  border-radius: 25px;
+}
+.faq_question p:hover{
+  background: #2f4d5a;
+}
+.faq_answer{
+  display: none;
+  /*background: #2f4d5a;*/
+  color: #1b1e21 !important;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#earthika_agro_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/earthika_home_page2.jpeg") top center;
+  background-size: cover;
+  position: relative;
+}
+
+
+#turmeric_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/turmeric-powder2.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#tomato_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/tomato.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#ginger_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/ginger.jpg")  center;
+  background-size: cover;
+  position: relative;
+}
+#green_chilli_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/chilli.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+
+#compost_top{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/compost.jpg") center;
+  background-size: cover;
+  position: relative;
+}
+.carousel-inner{
+  height: 100vh !important;
+}
+.portfolio{
+  padding-bottom: 60px;
+}
+.mobile_footer_header{
+  display: none;
+}
+
+#mobile_div{
+  display: none;
+}
+.mobile_footer_header{
+  display: none;
+}
+
+@media (max-width: 768px){
+  #header {
+    padding: 15px 0 !important;
+  }
+  .faq_question {
+    color: #FFFFFF !important;
+    margin-right: 0px !important;
+    margin-top: 32px;
+  }
+  .faq_question p {
+    /*margin: 0 0 20px 20px;*/
+    background: #1c7430;
+    border-radius: 25px;
+  }
+  .back-to-top{
+    display: none !important;
+  }
+  .mobile_footer_header {
+    position: fixed;
+    display: block !important;
+    width: 100%;
+    height: 40px;
+    border-radius: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #3e6171;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+    text-align: center;
+  }
+  #header{
+    /*display: none;*/
+  }
+  .section-title{
+    /*display: none;*/
+  }
+  .about .row{
+    justify-content: center;
+  }
+  .product_type_name{
+    display: none;
+  }
+  .about .content {
+    padding: 0 0px 0px 0 !important;
+  }
+  .icon_size_package_images{
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+  }
+  .about .icon-box .mb-lg-0{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  #package_img{
+    margin: 10px 0 0 0 !important;
+  }
+  .row_no_gutters{
+    margin-top: 0px;
+  }
+
+  .icon_box_aos_init{
+    margin: 0px;
+  }
+  .row_icon_image{
+    margin-bottom: 10px;
+  }
+  .d-lg-none{
+    display: none;
+  }
+  .mobile_footer_header_links{
+    color: #FFFFFF;
+    width: 10%;
+    height: 50px;
+    font-size: 10px;
+    margin: 1%;
+    justify-content: center;
+  }
+  .product_description{
+    margin-top: 20px;
+  }
+  .mobile_footer_header_div{
+    /*width: 16%;*/
+
+  }
+  .mobile_footer_header_links font{
+    /*font-size: 14px;*/
+  }
+  .mobile_footer_header_links i{
+    font-size: 18px;
+  }
+  .mobile_footer_header label{
+    width: 13% !important;
+
+  }
+  .mobile_footer_header_links a{
+    color: #FFFFFF;
+  }
+  .mobile_footer_header_links a:focus, a:hover {
+     color: #FFFFFF;
+    text-decoration: unset;
+  }
+  .back_to_home_top{
+    color: #FFFFFF !important;
+    text-decoration: unset !important;
+  }
+  #desktop_div{
+    display: none;
+  }
+  /*.desktop_div{*/
+  /*  display: none;*/
+  /*}*/
+  #mobile_div{
+    display: block;
+  }
+.portfolio .carousel-inner{
+  height: 50% !important;
+  /*margin-top: 25vh;*/
+}
+  .mobile_footer_header_links a:focus{
+    color: #000000;
   }
 }

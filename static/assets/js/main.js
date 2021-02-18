@@ -197,7 +197,7 @@
   // Init AOS
   function aos_init() {
     AOS.init({
-      duration: 800,
+      duration: 1,
       easing: "ease-in-out",
       once: true
     });
@@ -263,6 +263,12 @@ console.log('set_src');
     var product_id = $(this).find('label').attr('id');
     $(".enquiry_product_id").attr('value',product_id);
   });
+
+  $('.carousel').carousel({
+  interval: 2000
+});
+
+
 
 
 })(jQuery);
