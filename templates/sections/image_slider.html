@@ -27,9 +27,9 @@
 {#              <div class="centered" >#}
                   <div class="hero-container" data-aos="fade-up">
                       <h1>EARTHIKA AGRO</h1>
-                          <h2 style="font-size: 10px; width: 60%" >At Earthika, a group of professional and experienced people have joined
-                              together in doing Vertical Agriculture to grow Turmeric, Ginger, Green chilli & Tomatoes of the highest quality
-                          </h2>
+{#                          <h2 style="font-size: 15px;font-weight: bold; width: 60%" >At Earthika, a group of professional and experienced people have joined#}
+{#                              together in doing Vertical Agriculture to grow Turmeric, Ginger, Green chilli & Tomatoes of the highest quality#}
+{#                          </h2>#}
 
                   </div>
               </div>
@@ -38,7 +38,7 @@
             <div class="item" id="turmeric_top">
 {#                <img src="{% static 'assets/img/turmeric-powder2.jpg' %}" alt="" style="width:100%;height: 100vh;" >#}
                 <div class="centered">
-                    <div class="hero-container" data-aos="fade-up">
+                    <div class="hero-container" data-aos="fade-up" style="margin-top: 100px">
                         <h1>TURMERIC</h1>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}
   x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel,4000); // Change image every 2 seconds
 }
 </script>
 
@@ -185,3 +185,8 @@ function carousel() {
 {#  dots[slideIndex-1].className += " w3-white";#}
 {#}#}
 {#</script>#}
+
+{#earthika_home_slider  bgcolor#}
+{#1st- #B6D36B#}
+{#tomato - #448158#}
+{#3rd- turmeric -#697274#}

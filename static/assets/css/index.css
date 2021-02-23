@@ -15,7 +15,7 @@
 #earthika_agro_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/earthika_home_page2.jpeg") top center;
+  background: url("../img/shutter_stock/image_slide/earthika_slider.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -55,7 +55,7 @@
 #compost_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/compost.jpg") center;
+  background: url("../img/shutter_stock/image_slide/vermicompost.jpg") center;
   background-size: cover;
   position: relative;
 }
