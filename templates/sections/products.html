@@ -44,7 +44,7 @@
                     <div  {% if forloop.counter == 1  %}class="tabe-pane fade active show"{% else %}class="tabe-pane fade" style="display: none !important;" {% endif %} id="menu1{{ pt.id }}">
                         <div  class="row no-gutters">
                             <div class="col-xl-6 aos-init row_no_gutters"  align="center">
-                                <img  style="border-radius: 5%" src="/media/{{ pt.image }}" width="80%" height="80%" id="product_image{{ pt.id }}" class="product_image_class">
+                                <img  style="border-radius: 5%" src="/media/{{ pt.image }}"  id="product_image{{ pt.id }}" class="product_image_class">
                                 {% for img in packages %}
                                     {% if img.product_package.id == pt.id %}
                                         <img class="package_image" id="img{{ img.id }}" src="/media/{{ img.package_image }}" width="80%" height="80%"  style="display: none">
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                                 <div class="col-xl-12 aos-init" align="center">
-                                    <img style="width: 100%;height: 500px;margin-top: 40px" src="/media/{{ product.image }}"   class="{{ img.id }}" width="100%" height="100%" />
+                                    <img style="width: 100%;margin-top: 40px" src="/media/{{ product.image }}"   class="{{ img.id }}" width="100%" height="100%" />
                                 </div>
 
 
