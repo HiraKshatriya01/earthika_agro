@@ -15,7 +15,7 @@
 #earthika_agro_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/earthika_slider.jpg") top center;
+  background: url("../img/shutter_stock/image_slide/agro.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -24,7 +24,7 @@
 #turmeric_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/turmeric.jpg") center;
+  background: url("../img/shutter_stock/image_slide/agro2.png") center;
   background-size: cover;
   position: relative;
 }
@@ -32,7 +32,7 @@
 #tomato_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/tomato.jpg") center;
+  background: url("../img/shutter_stock/image_slide/tomato_slider.jpg") center;
   background-size: cover;
   position: relative;
 }
@@ -40,14 +40,14 @@
 #ginger_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/ginger.jpg")  center;
+  background: url("../img/shutter_stock/image_slide/ginger_slider.jpg")  center;
   background-size: cover;
   position: relative;
 }
 #green_chilli_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/green_chilli.jpg") center;
+  background: url("../img/shutter_stock/image_slide/chilli_slider.jpg") center;
   background-size: cover;
   position: relative;
 }
@@ -55,7 +55,18 @@
 #compost_top{
   width: 100%;
   height: 100vh;
-  background: url("../img/shutter_stock/image_slide/vermicompost.jpg") center;
+  background: url("../img/shutter_stock/image_slide/compost_slider.jpg") center;
   background-size: cover;
   position: relative;
+}
+
+/*header .d-lg-block a {*/
+/*    color: #083905 !important;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.carousel-item image{*/
+/*  box-shadow:10px 10px gray;*/
+/*}*/
+#hero{
+  background: #f5f8a0;
 }

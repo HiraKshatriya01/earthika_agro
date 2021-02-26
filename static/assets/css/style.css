@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo h1 a, #header .logo h1 a:hover {
-  color: #fff;
+  color: #083905;
   text-decoration: none;
 }
 
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 15px;
 }
 header .d-lg-block a{
-  color: #FFFFFF !important;
+  color: #083905 !important;
   font-weight: bold;
 }
 #hero .hero-container {
