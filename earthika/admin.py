@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from earthika.models import *
 from django.utils.html import format_html
 
